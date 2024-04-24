@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  host-app:
+    build:
+      context: ./telust-todo-list-host
+      dockerfile: Dockerfile
+    ports: 
+      - 80:3000
+  mfe-app:
+    build:
+      context: ./telust-todo-list-app
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
